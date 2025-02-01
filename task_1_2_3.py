@@ -86,7 +86,7 @@ class Tree:
         pos = {}
         max_value = self.max_value()
         min_value = self.min_value()
-        print(max_value, min_value)
+        print(f"Max--> {max_value}, Min--> {min_value}")
 
         def traverse(node, x=0.0, y=0.0, layer=1.0):
             if node:
@@ -175,15 +175,6 @@ class Tree:
         return _sum_all(self.root)
 
 
-# tree = Tree()
-# values = [10, 20, 30, 40, 50, 25, 100]
-
-
-# print(tree.max_value())
-# print(tree.min_value())
-# print(tree.sum_all())
-
-
 if __name__ == "__main__":
     print("захопили мене дерева, якось сталось що всі три таски в одну поєднались")
     tree = Tree()
@@ -193,4 +184,7 @@ if __name__ == "__main__":
     for v in leaves:
         tree.add_root(v)
 
+    print(f"MAX--> {tree.max_value()}")
+    print(f"MIN-->{tree.min_value()}")
+    print(f"TOTAL-->{tree.sum_all()}")
     tree.show_tree()
